@@ -1,6 +1,6 @@
 // *************************** CONFIGURATION STUFF ************************** //
 #include "config.h"
-const char* owner = "Mary"; 
+const char* owner = "ENTER OWNER NAME HERE"; 
 
 // *************************** DISPLAY STUFF ************************** //
 Adafruit_SH1107 display = Adafruit_SH1107(64, 128, &Wire);
@@ -41,8 +41,8 @@ bool count_up = true;
 // *************************** IO and WIFI STUFF ************************** //
 WiFiClient client;
 Adafruit_MQTT_Client mqtt(&client, AIO_SERVER, AIO_SERVERPORT, AIO_USERNAME, AIO_KEY);
-Adafruit_MQTT_Publish lamp_pub = Adafruit_MQTT_Publish(&mqtt, AIO_USERNAME "/feeds/friendship-lamp");
-Adafruit_MQTT_Subscribe lamp_sub = Adafruit_MQTT_Subscribe(&mqtt, AIO_USERNAME "/feeds/friendship-lamp");
+Adafruit_MQTT_Publish lamp_pub = Adafruit_MQTT_Publish(&mqtt, AIO_USERNAME "/feeds/PUT YOUR FEED NAME HERE");
+Adafruit_MQTT_Subscribe lamp_sub = Adafruit_MQTT_Subscribe(&mqtt, AIO_USERNAME "/feeds/PUT YOUR FEED NAME HERE");
 
 // Keep alive time stuff
 unsigned long previous_keepalive_time = 0;

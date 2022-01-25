@@ -1,14 +1,13 @@
 // *************************** CONFIGURATION STUFF ************************** //
 #include "config.h"
-const char* owner = "Sarah"; 
+const char* owner = "Lamp Owner Name"; 
 const char* all_friends = "All Friends"; 
 
 // ******** FRIEND STUFF ******** //
+// List your friends here
 String friends[] = { 
-  "Natalie", 
-  "Norah", 
-  "Mary",
-  "All Friends"
+  "friend A",
+  "ALl Friends"
 };
 
 int friend_len = sizeof(friends)/sizeof(friends[0]);
@@ -31,8 +30,8 @@ bool blueCurrentLongPress = false;
 // *************************** IO and WIFI STUFF ************************** //
 WiFiClient client;
 Adafruit_MQTT_Client mqtt(&client, AIO_SERVER, AIO_SERVERPORT, AIO_USERNAME, AIO_KEY);
-Adafruit_MQTT_Publish lamp_pub = Adafruit_MQTT_Publish(&mqtt, AIO_USERNAME "/feeds/friendship-lamp");
-Adafruit_MQTT_Subscribe lamp_sub = Adafruit_MQTT_Subscribe(&mqtt, AIO_USERNAME "/feeds/friendship-lamp");
+Adafruit_MQTT_Publish lamp_pub = Adafruit_MQTT_Publish(&mqtt, AIO_USERNAME "/feeds/PUT YOUR FEED NAME HERE");
+Adafruit_MQTT_Subscribe lamp_sub = Adafruit_MQTT_Subscribe(&mqtt, AIO_USERNAME "/feeds/fPUT YOUR FEED NAME HERE");
 
 // Keep alive time stuff
 unsigned long previous_keepalive_time = 0;

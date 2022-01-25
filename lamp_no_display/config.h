@@ -11,21 +11,19 @@
 #include <SPI.h>
 #include <Wire.h>
 #include "ArduinoJson.h"
+#include "AdafruitIO_WiFi.h"
 
 //************************ Adafruit IO Setup *******************************/
-#define IO_USERNAME    "mmicatka"
-#define IO_KEY         "aio_UlUl53OygcqBIR7DMLB8XXTMl878"
-
 #define AIO_SERVER      "io.adafruit.com"
 #define AIO_SERVERPORT  1883                   // use 8883 for SSL
-#define AIO_USERNAME    "mmicatka"
-#define AIO_KEY         "aio_UlUl53OygcqBIR7DMLB8XXTMl878" // Put Your adafruit ID here
+#define AIO_USERNAME    "ENTER USERNAME HERE"
+#define AIO_KEY         "ENTER YOUR KEY HERE" // Put Your adafruit ID here
 #define MQTT_KEEP_ALIVE 65535
 
 //************************ Wifi Setup *******************************/
-#define AP_NAME    "Friendship Lamp"
-#define AP_PASSWORD "friendship_forever"
-#include "AdafruitIO_WiFi.h"
+#define AP_NAME    "Friendship Lamp" // this is the name of the wifi network the lamp creates
+#define AP_PASSWORD "12345" // this is the login for the wifi network
+
 //************************ Adafruit Neopixels *******************************/
 #define LED_PIN    14
 #define LED_COUNT 24
